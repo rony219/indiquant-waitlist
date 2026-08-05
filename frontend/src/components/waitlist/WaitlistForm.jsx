@@ -592,7 +592,8 @@ setEmail("");
     return (
       <SuccessCard
         queuePosition={successData.queue_position}
-        referralLink={`http://localhost:5173/ref/${successData.referral_code}`}
+        // referralLink={`http://localhost:5173/ref/${successData.referral_code}`}
+        referralLink={`https://indiquant-waitlist.vercel.app/ref/${successData.referral_code}`}
       />
     );
   }
