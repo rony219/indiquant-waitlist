@@ -12,9 +12,19 @@ DATABASE_URL = (
     f"{settings.DB_NAME}"
 )
 
+# engine = create_engine(
+#     DATABASE_URL,
+#     echo=True
+# )
+
 engine = create_engine(
     DATABASE_URL,
-    echo=True
+    echo=True,
+    connect_args={
+        "ssl": {
+            "ssl_mode": "REQUIRED"
+        }
+    }
 )
 
 SessionLocal = sessionmaker(
