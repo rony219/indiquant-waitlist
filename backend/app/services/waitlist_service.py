@@ -340,7 +340,8 @@ class WaitlistService:
             "total_users": total_users,
             "referral_count": user.referral_count,
             "referral_code": user.referral_code,
-            "referral_link": f"http://localhost:5173/ref/{user.referral_code}",
+            # "referral_link": f"http://localhost:5173/ref/{user.referral_code}",
+            "referral_link": f"https://indiquant-waitlist.vercel.app/ref/{user.referral_code}",
             "status": user.status,
             "created_at": user.created_at,
         } 
