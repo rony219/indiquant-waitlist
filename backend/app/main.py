@@ -65,6 +65,18 @@ app = FastAPI(
 Base.metadata.create_all(bind=engine)
 
 # CORS Middleware
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=[
+#         "http://localhost:5173",
+#         "http://127.0.0.1:5173",
+#         "https://indiquant-waitlist.vercel.app",
+#         "https://join.indiquantresearch.in",
+#     ],
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
