@@ -163,11 +163,12 @@ function HowHero() {
             fontWeight: 600,
           }}
         >
-          A Better Way
+          {/* A Better Way */}
+          What If Every Quant 
           <br />
 
           <span className="italic text-[#E8C27A]">
-            To Discover Talent.
+            Could Build Like a Hedge Fund?
           </span>
         </motion.h1>
 

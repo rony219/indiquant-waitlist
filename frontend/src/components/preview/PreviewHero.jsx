@@ -102,9 +102,10 @@ function PreviewHero() {
           transition={{ delay: .4 }}
           className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-gray-400"
         >
-          Explore the recruitment platform that's redefining
+          {/* Explore the recruitment platform that's redefining
           how students prove their skills and how companies
-          discover exceptional talent.
+          discover exceptional talent. */}
+          Every strategy begins as research. We provide the infrastructure to discover, evaluate, and elevate the ideas that outperform.
         </motion.p>
 
       </div>

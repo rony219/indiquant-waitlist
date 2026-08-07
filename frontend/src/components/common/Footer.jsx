@@ -37,12 +37,12 @@ function Footer() {
 
         <div className="mt-14 flex flex-wrap items-center justify-center gap-10">
 
-          <a
+          {/* <a
             href="/how-it-works"
             className="text-gray-400 transition hover:text-[#E8C27A]"
           >
             How It Works
-          </a>
+          </a> */}
 
           <a
             href="/waitlist-journey"
@@ -68,9 +68,9 @@ function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-6 text-sm text-gray-500 md:flex-row">
 
-          <p>
+          {/* <p>
             © 2026 IndiQuant. All rights reserved.
-          </p>
+          </p> */}
 
           <button
             onClick={() =>

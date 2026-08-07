@@ -88,32 +88,32 @@ function HowItWorks() {
 
         <HowStep
           number="01"
-          title="Verify Your Identity"
-          description="Complete a one-time identity verification to ensure every assessment is securely linked to your profile and prevent duplicate registrations."
-          image="/images/verify.jpg"
+          title="Every Great Quant Starts With One Idea"
+          description="Become part of a community of researchers, traders, and data scientists building the future of quantitative intelligence."
+          image="/images/verify2.jpg"
         />
 
         <HowStep
           reverse
           number="02"
-          title="Complete Assessments"
-          description="Showcase your abilities through aptitude tests, coding challenges, and practical real-world tasks designed to evaluate genuine skills."
-          image="/images/assesments.jpg"
+          title="Turn Data Into Decisions"
+          description="Develop, backtest, and refine quantitative models using institutional-grade research tools and market data."
+          image="/images/assesments1.jpg"
         />
 
         <HowStep
           number="03"
-          title="Compete Live"
-          description="Participate in recruitment tournaments where performance, consistency, and teamwork help you stand out from other candidates."
-          image="/images/tournament.jpg"
+          title="Let the Numbers Decide"
+          description="Our AI continuously evaluates every model, separating robust signals from market noise."
+          image="/images/tournament2.jpg"
         />
 
         <HowStep
           reverse
           number="04"
-          title="Get Interview Opportunities"
-          description="Top performers receive interview invitations, early hiring opportunities, and exclusive access to upcoming recruitment events."
-          image="/images/interview.jpg"
+          title="Performance Speaks Loudest"
+          description="The highest-performing research rises through merit and contributes to the future of systematic investing."
+          image="/images/interview2.jpg"
         />
 
       </main>

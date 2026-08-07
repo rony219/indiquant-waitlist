@@ -127,13 +127,12 @@ function FutureSection() {
           className="mb-20 text-center"
         >
           <h2 className="heading-font text-4xl text-white md:text-6xl">
-            See the Future Before It Launches
+            What If the World's Best Hedge Fund Didn't Hire Analysts?
+What If It Found Them?
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-400">
-            Experience the next generation of recruitment where
-            verified identity, real skills and AI-powered
-            assessments create opportunities based on talent.
+IndiQuant discovers exceptional quantitative research through open competition, AI evaluation, and performance-driven intelligence.
           </p>
         </motion.div>
 
@@ -223,18 +222,18 @@ function FutureSection() {
           <div className="space-y-10">
 
             <FeaturePoint
-              title="Permanent Identity Verification"
-              description="Every participant is verified once and securely connected to every assessment."
+              title="Ideas Beat Titles."
+              description="Every research idea is evaluated on its performance, not who created it."
             />
 
             <FeaturePoint
-              title="Real Skill Evaluation"
-              description="Measure practical ability through coding, aptitude and live recruitment events."
+              title="AI Finds the Signal."
+              description="Machine learning continuously ranks and combines the strongest quantitative insights."
             />
 
             <FeaturePoint
-              title="Merit First Recruitment"
-              description="Talent rises through performance, creating fair opportunities for every candidate."
+              title="Performance Speaks Loudest."
+              description="The best research earns recognition by consistently delivering measurable alpha."
             />
 
           </div>
