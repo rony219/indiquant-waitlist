@@ -593,7 +593,8 @@ setEmail("");
       <SuccessCard
         queuePosition={successData.queue_position}
         // referralLink={`http://localhost:5173/ref/${successData.referral_code}`}
-        referralLink={`https://indiquant-waitlist.vercel.app/ref/${successData.referral_code}`}
+        referralLink={`https://join.indiquantresearch.in/ref/${successData.referral_code}`}
+        // referralLink={`https://indiquant-waitlist.vercel.app/ref/${successData.referral_code}`}
       />
     );
   }
