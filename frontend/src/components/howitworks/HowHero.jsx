@@ -164,11 +164,11 @@ function HowHero() {
           }}
         >
           {/* A Better Way */}
-          What If Every Quant 
+          Research Like 
           <br />
 
           <span className="italic text-[#E8C27A]">
-            Could Build Like a Hedge Fund?
+            a Hedge Fund
           </span>
         </motion.h1>
 
