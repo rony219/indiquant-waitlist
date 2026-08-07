@@ -170,6 +170,197 @@
 // export default ComingSoon;
 
 
+
+
+
+
+
+
+
+
+
+// import { motion } from "framer-motion";
+// import {
+//   CheckCircle2,
+//   Sparkles,
+//   Trophy,
+//   Rocket,
+// } from "lucide-react";
+
+// const phases = [
+//   {
+//     icon: CheckCircle2,
+//     title: "Private Beta",
+//     description:
+//       "Building the foundation with a limited group of early adopters.",
+//     status: "Currently Active",
+//     active: true,
+//   },
+//   {
+//     icon: Sparkles,
+//     title: "Early Access",
+//     description:
+//       "Waitlist members receive exclusive invitations before public release.",
+//   },
+//   {
+//     icon: Trophy,
+//     title: "Tournaments",
+//     description:
+//       "Compete in real-world challenges and get discovered by companies.",
+//   },
+//   {
+//     icon: Rocket,
+//     title: "Public Launch",
+//     description:
+//       "The complete IndiQuant platform becomes available worldwide.",
+//   },
+// ];
+
+// function ComingSoon() {
+//   return (
+//     <section className="relative overflow-hidden px-6 py-36">
+
+      
+
+//       <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#E8C27A]/5 blur-[180px]" />
+
+//       <div className="relative z-10 mx-auto max-w-4xl">
+
+       
+
+//         <div className="mb-28 text-center">
+
+//           <p className="text-sm tracking-[0.35em] text-[#E8C27A]">
+//             ROADMAP
+//           </p>
+
+//           <h2
+//             className="mt-5 text-4xl md:text-6xl"
+//             style={{
+//               fontFamily: "var(--font-heading)",
+//             }}
+//           >
+//             The Journey Begins
+//           </h2>
+
+//           <p className="mx-auto mt-6 max-w-2xl leading-8 text-gray-400">
+//             Every milestone moves IndiQuant one step closer to redefining
+//             modern recruitment.
+//           </p>
+
+//         </div>
+
+//         <div className="relative">
+
+          
+
+//           <div className="absolute left-6 top-0 h-full w-px bg-gradient-to-b from-[#E8C27A] via-[#E8C27A]/40 to-transparent" />
+
+//           <div className="space-y-16">
+
+//             {phases.map((phase, index) => {
+
+//               const Icon = phase.icon;
+
+//               return (
+
+//                 <motion.div
+//                   key={phase.title}
+//                   initial={{ opacity: 0, y: 50 }}
+//                   whileInView={{ opacity: 1, y: 0 }}
+//                   viewport={{ once: true }}
+//                   transition={{
+//                     duration: .6,
+//                     delay: index * .15,
+//                   }}
+//                   className="relative flex gap-8"
+//                 >
+
+                  
+
+//                   <div className="relative z-20">
+
+//                     <motion.div
+//                       animate={
+//                         phase.active
+//                           ? {
+//                               scale: [1, 1.15, 1],
+//                             }
+//                           : {}
+//                       }
+//                       transition={{
+//                         repeat: Infinity,
+//                         duration: 2,
+//                       }}
+//                       className={`flex h-12 w-12 items-center justify-center rounded-full border ${
+//                         phase.active
+//                           ? "border-[#E8C27A] bg-[#E8C27A] text-black shadow-[0_0_35px_rgba(232,194,122,.8)]"
+//                           : "border-[#E8C27A]/30 bg-[#E8C27A]/10 text-[#E8C27A]"
+//                       }`}
+//                     >
+//                       <Icon size={22} />
+//                     </motion.div>
+
+//                   </div>
+
+                  
+
+//                   <motion.div
+//                     whileHover={{
+//                       y: -6,
+//                     }}
+//                     className="
+//                       flex-1
+//                       rounded-[30px]
+//                       border
+//                       border-white/10
+//                       bg-white/5
+//                       p-8
+//                       backdrop-blur-3xl
+//                       transition-all
+//                       duration-500
+//                       hover:border-[#E8C27A]/30
+//                     "
+//                   >
+
+//                     <h3 className="text-3xl font-semibold text-white">
+//                       {phase.title}
+//                     </h3>
+
+//                     <p className="mt-5 leading-8 text-gray-400">
+//                       {phase.description}
+//                     </p>
+
+//                     {phase.active && (
+
+//                       <div className="mt-8 inline-flex rounded-full border border-[#E8C27A]/30 bg-[#E8C27A]/10 px-5 py-2 text-sm text-[#E8C27A]">
+//                         ● {phase.status}
+//                       </div>
+
+//                     )}
+
+//                   </motion.div>
+
+//                 </motion.div>
+
+//               );
+
+//             })}
+
+//           </div>
+
+//         </div>
+
+//       </div>
+
+//     </section>
+//   );
+// }
+
+// export default ComingSoon;
+
+
+
 import { motion } from "framer-motion";
 import {
   CheckCircle2,
@@ -207,26 +398,26 @@ const phases = [
   },
 ];
 
-function ComingSoon() {
+export default function ComingSoon() {
   return (
-    <section className="relative overflow-hidden px-6 py-36">
+    <section className="relative overflow-hidden px-5 py-28 md:px-8">
 
       {/* Background Glow */}
 
       <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#E8C27A]/5 blur-[180px]" />
 
-      <div className="relative z-10 mx-auto max-w-4xl">
+      <div className="relative z-10 mx-auto max-w-5xl">
 
         {/* Heading */}
 
-        <div className="mb-28 text-center">
+        <div className="mb-20 text-center md:mb-28">
 
-          <p className="text-sm tracking-[0.35em] text-[#E8C27A]">
+          <p className="text-xs tracking-[0.35em] text-[#E8C27A] md:text-sm">
             ROADMAP
           </p>
 
           <h2
-            className="mt-5 text-4xl md:text-6xl"
+            className="mt-4 text-4xl md:mt-5 md:text-6xl"
             style={{
               fontFamily: "var(--font-heading)",
             }}
@@ -234,20 +425,22 @@ function ComingSoon() {
             The Journey Begins
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl leading-8 text-gray-400">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-gray-400 md:mt-6 md:text-lg md:leading-8">
             Every milestone moves IndiQuant one step closer to redefining
             modern recruitment.
           </p>
 
         </div>
 
+        {/* Timeline */}
+
         <div className="relative">
 
           {/* Vertical Line */}
 
-          <div className="absolute left-6 top-0 h-full w-px bg-gradient-to-b from-[#E8C27A] via-[#E8C27A]/40 to-transparent" />
+          <div className="absolute left-[20px] top-0 h-full w-px bg-gradient-to-b from-[#E8C27A] via-[#E8C27A]/40 to-transparent md:left-7" />
 
-          <div className="space-y-16">
+          <div className="space-y-10 md:space-y-16">
 
             {phases.map((phase, index) => {
 
@@ -257,19 +450,19 @@ function ComingSoon() {
 
                 <motion.div
                   key={phase.title}
-                  initial={{ opacity: 0, y: 50 }}
+                  initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{
                     duration: .6,
                     delay: index * .15,
                   }}
-                  className="relative flex gap-8"
+                  className="relative flex items-start gap-4 md:gap-8"
                 >
 
-                  {/* Timeline Dot */}
+                  {/* Icon */}
 
-                  <div className="relative z-20">
+                  <div className="relative z-20 flex-shrink-0">
 
                     <motion.div
                       animate={
@@ -283,13 +476,13 @@ function ComingSoon() {
                         repeat: Infinity,
                         duration: 2,
                       }}
-                      className={`flex h-12 w-12 items-center justify-center rounded-full border ${
+                      className={`flex h-10 w-10 items-center justify-center rounded-full border md:h-14 md:w-14 ${
                         phase.active
                           ? "border-[#E8C27A] bg-[#E8C27A] text-black shadow-[0_0_35px_rgba(232,194,122,.8)]"
                           : "border-[#E8C27A]/30 bg-[#E8C27A]/10 text-[#E8C27A]"
                       }`}
                     >
-                      <Icon size={22} />
+                      <Icon size={18} className="md:h-6 md:w-6" />
                     </motion.div>
 
                   </div>
@@ -302,29 +495,30 @@ function ComingSoon() {
                     }}
                     className="
                       flex-1
-                      rounded-[30px]
+                      rounded-3xl
                       border
                       border-white/10
                       bg-white/5
-                      p-8
+                      p-5
                       backdrop-blur-3xl
                       transition-all
                       duration-500
                       hover:border-[#E8C27A]/30
+                      md:p-8
                     "
                   >
 
-                    <h3 className="text-3xl font-semibold text-white">
+                    <h3 className="text-2xl font-semibold text-white md:text-3xl">
                       {phase.title}
                     </h3>
 
-                    <p className="mt-5 leading-8 text-gray-400">
+                    <p className="mt-4 text-[15px] leading-7 text-gray-400 md:mt-5 md:text-base md:leading-8">
                       {phase.description}
                     </p>
 
                     {phase.active && (
 
-                      <div className="mt-8 inline-flex rounded-full border border-[#E8C27A]/30 bg-[#E8C27A]/10 px-5 py-2 text-sm text-[#E8C27A]">
+                      <div className="mt-6 inline-flex rounded-full border border-[#E8C27A]/30 bg-[#E8C27A]/10 px-4 py-2 text-xs text-[#E8C27A] md:mt-8 md:px-5 md:text-sm">
                         ● {phase.status}
                       </div>
 
@@ -347,5 +541,3 @@ function ComingSoon() {
     </section>
   );
 }
-
-export default ComingSoon;
