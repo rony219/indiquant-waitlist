@@ -5,7 +5,7 @@ import PreviewHero from "../components/preview/PreviewHero";
 import PlatformPreview from "../components/preview/PlatformPreview";
 import FeatureGrid from "../components/preview/FeatureGrid";
 import ComingSoon from "../components/preview/ComingSoon";
-import PreviewCTA from "../components/preview/PreviewCTA";
+// import PreviewCTA from "../components/preview/PreviewCTA";
 import Footer from "../components/common/Footer";
 import useLenis from "../hooks/useLenis";
 
@@ -29,7 +29,7 @@ function SneakPeek() {
 
         <ComingSoon />
 
-        <PreviewCTA />
+        {/* <PreviewCTA /> */}
 
         <Footer />
 
