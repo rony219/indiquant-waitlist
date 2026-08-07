@@ -195,7 +195,7 @@ const phases = [
   },
   {
     icon: Trophy,
-    title: "Recruitment Tournaments",
+    title: "Tournaments",
     description:
       "Compete in real-world challenges and get discovered by companies.",
   },
