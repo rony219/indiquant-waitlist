@@ -111,7 +111,7 @@
 import { motion } from "framer-motion";
 import FeaturePoint from "../common/FeaturePoint";
 
-import waitingImage from "../../assets/waitingimg.jpg";
+import waitingImage from "../../assets/waitingimg1.jpg";
 
 function FutureSection() {
   return (
