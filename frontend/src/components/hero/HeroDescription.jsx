@@ -39,9 +39,7 @@ function HeroDescription() {
       px-2
       "
     >
-      Discover a smarter way to identify exceptional talent through
-      AI-powered assessments, real-world challenges, and an exclusive
-      recruitment experience built for the next generation.
+Behind every move is a signal. Behind every signal is a possibility. We bring thousands of quantitative minds together to uncover what others miss.
     </motion.p>
   );
 }

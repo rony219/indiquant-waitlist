@@ -56,11 +56,11 @@ function HeroHeading() {
           fontWeight: 600,
         }}
       >
-        The Future
+        The Market
         <br />
 
         <span className="italic text-[#E8C27A]">
-          Illuminated.
+          Leaves Clues.
         </span>
       </h1>
     </motion.div>
