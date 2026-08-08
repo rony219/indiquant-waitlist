@@ -42,7 +42,7 @@ function PlatformPreview() {
         >
 
           <img
-            src="/images/platform-preview2.png"
+            src="/images/previewpic.jpg"
             alt="Platform Preview"
             className="w-full rounded-[24px]"
           />
