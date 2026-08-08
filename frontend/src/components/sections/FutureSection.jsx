@@ -127,8 +127,7 @@ function FutureSection() {
           className="mb-20 text-center"
         >
           <h2 className="heading-font text-4xl text-white md:text-6xl">
-            What If the World's Best Hedge Fund Didn't Hire Analysts?
-What If It Found Them?
+What If The Market Found Its Quants?
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-400">
