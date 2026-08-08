@@ -28,9 +28,7 @@ function Footer() {
         {/* Description */}
 
         <p className="mx-auto mt-8 max-w-2xl leading-8 text-gray-400">
-          Building the future of skill-based recruitment through
-          AI-powered assessments, recruitment tournaments,
-          and transparent hiring experiences.
+One signal can change a trade. The right signals can change everything.
         </p>
 
         {/* Navigation */}
@@ -43,7 +41,7 @@ function Footer() {
           >
             How It Works
           </a> */}
-
+{/* 
           <a
             href="/waitlist-journey"
             className="text-gray-400 transition hover:text-[#E8C27A]"
@@ -56,7 +54,7 @@ function Footer() {
             className="text-gray-400 transition hover:text-[#E8C27A]"
           >
             Sneak Peek
-          </a>
+          </a> */}
 
         </div>
 

@@ -192,9 +192,7 @@ function HowHero() {
           md:text-xl
           "
         >
-          IndiQuant transforms traditional recruitment into
-          a transparent, AI-powered hiring experience focused
-          entirely on real skills—not resumes.
+Institutional-grade research infrastructure meets crowdsourced intelligence and machine learning.
         </motion.p>
 
       </div>
