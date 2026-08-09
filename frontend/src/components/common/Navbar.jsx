@@ -22,7 +22,8 @@ function Navbar() {
   // ----------------------------------------
   // Preserve referral link on Home button
   // ----------------------------------------
-  const referralCode = localStorage.getItem("referralCode");
+  const referralCode = sessionStorage.getItem("referralCode");
+  // const referralCode = localStorage.getItem("referralCode");
 
   const homeLink = referralCode
     ? `/ref/${referralCode}`

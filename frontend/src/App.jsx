@@ -194,10 +194,14 @@ function ReferralTracker() {
     if (match) {
       const referralCode = match[1];
 
-      localStorage.setItem(
+      sessionStorage.setItem(
         "referralCode",
         referralCode
       );
+      // localStorage.setItem(
+      //   "referralCode",
+      //   referralCode
+      // );
 
       console.log(
         "Referral code saved:",
