@@ -207,9 +207,9 @@ function Footer() {
 
           {/* Copyright */}
 
-          <p className="text-xs text-gray-600 md:text-sm">
+          {/* <p className="text-xs text-gray-600 md:text-sm">
             © 2026 IndiQuant. All rights reserved.
-          </p>
+          </p> */}
 
 
           {/* Back To Top */}
