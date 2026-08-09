@@ -1,293 +1,198 @@
-import { ChevronUp, Linkedin, MessageCircle, Twitter } from "lucide-react";
-import { motion } from "framer-motion";
+import {
+  FaWhatsapp,
+  FaXTwitter,
+  FaLinkedinIn,
+} from "react-icons/fa6";
+import { ChevronUp, ArrowUpRight } from "lucide-react";
 
 function Footer() {
   const socialLinks = [
     {
       name: "WhatsApp",
-      icon: MessageCircle,
+      icon: FaWhatsapp,
       href: "https://whatsapp.com/channel/0029VbCMqCEAe5VngmEunO2e",
-      description: "Connect with us",
     },
     {
-      name: "X / Twitter",
-      icon: Twitter,
+      name: "X",
+      icon: FaXTwitter,
       href: "https://x.com/indiquantlabs",
-      description: "Follow our updates",
     },
     {
       name: "LinkedIn",
-      icon: Linkedin,
+      icon: FaLinkedinIn,
       href: "https://www.linkedin.com/company/indiquant-by-cawm",
-      description: "Join our network",
     },
   ];
 
+  const handleBackToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <footer className="relative overflow-hidden px-5 pb-10 pt-10 md:px-8">
+    <footer className="relative overflow-hidden px-5 pb-8 pt-16 md:px-8 md:pt-24">
 
-      {/* ============================= */}
-      {/* Top Glow Line */}
-      {/* ============================= */}
+      {/* -------------------------------- */}
+      {/* Background Glows */}
+      {/* -------------------------------- */}
 
-      <div className="mx-auto mb-20 h-px max-w-7xl bg-gradient-to-r from-transparent via-[#E8C27A]/70 to-transparent" />
+      <div className="pointer-events-none absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full bg-[#E8C27A]/5 blur-[130px]" />
 
-      {/* ============================= */}
-      {/* Background Glow */}
-      {/* ============================= */}
+      <div className="pointer-events-none absolute bottom-0 left-0 h-72 w-72 rounded-full bg-[#E8C27A]/[0.025] blur-[120px]" />
 
-      <div
-        className="
-          pointer-events-none
-          absolute
-          left-1/2
-          top-24
-          h-72
-          w-72
-          -translate-x-1/2
-          rounded-full
-          bg-[#E8C27A]/5
-          blur-[120px]
-        "
-      />
+      <div className="pointer-events-none absolute right-0 top-1/3 h-72 w-72 rounded-full bg-white/[0.015] blur-[120px]" />
 
-      {/* ============================= */}
-      {/* Main Content */}
-      {/* ============================= */}
+
+      {/* -------------------------------- */}
+      {/* Top Gold Line */}
+      {/* -------------------------------- */}
+
+      <div className="relative mx-auto mb-16 h-px max-w-7xl bg-gradient-to-r from-transparent via-[#E8C27A]/50 to-transparent md:mb-20" />
+
+
+      {/* -------------------------------- */}
+      {/* Main Footer Content */}
+      {/* -------------------------------- */}
 
       <div className="relative z-10 mx-auto max-w-6xl text-center">
 
         {/* Logo */}
 
-        <motion.h2
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <h2
           className="
             text-3xl
             tracking-[0.3em]
             text-white
-            sm:text-4xl
-            md:text-5xl
+            md:text-4xl
+            md:tracking-[0.4em]
           "
           style={{
             fontFamily: "var(--font-heading)",
           }}
         >
           INDIQUANT
-        </motion.h2>
+        </h2>
+
 
         {/* Description */}
 
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.6,
-            delay: 0.1,
-          }}
+        <p
           className="
             mx-auto
             mt-6
-            max-w-2xl
-            px-2
+            max-w-xl
             text-sm
             leading-7
             text-gray-400
+            md:mt-7
             md:text-base
             md:leading-8
           "
         >
-          One signal can change a trade. The right signals can change
-          everything.
-        </motion.p>
+          One signal can change a trade.
+          <br className="hidden md:block" />
+          The right signals can change everything.
+        </p>
 
-        {/* ============================= */}
-        {/* Social Links */}
-        {/* ============================= */}
 
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+        {/* -------------------------------- */}
+        {/* Social Media */}
+        {/* -------------------------------- */}
 
-          {socialLinks.map((social, index) => {
+        <div className="mt-10 flex items-center justify-center gap-4 md:mt-12">
+
+          {socialLinks.map((social) => {
             const Icon = social.icon;
 
             return (
-              <motion.a
+              <a
                 key={social.name}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                initial={{
-                  opacity: 0,
-                  y: 15,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
-                }}
-                whileHover={{
-                  y: -5,
-                }}
+                aria-label={social.name}
                 className="
                   group
                   relative
                   flex
+                  h-12
+                  w-12
                   items-center
-                  gap-3
+                  justify-center
                   overflow-hidden
                   rounded-full
                   border
                   border-white/10
                   bg-white/[0.04]
-                  px-5
-                  py-3
+                  text-gray-400
                   backdrop-blur-xl
                   transition-all
-                  duration-300
+                  duration-500
+                  hover:-translate-y-1
                   hover:border-[#E8C27A]/40
                   hover:bg-[#E8C27A]/10
-                  hover:shadow-[0_10px_40px_rgba(232,194,122,0.08)]
+                  hover:text-[#E8C27A]
+                  hover:shadow-[0_0_30px_rgba(232,194,122,0.12)]
+                  md:h-13
+                  md:w-13
                 "
               >
 
-                {/* Hover Glow */}
+                {/* Inner Glow */}
 
                 <span
                   className="
                     pointer-events-none
                     absolute
                     inset-0
-                    -translate-x-full
-                    bg-gradient-to-r
-                    from-transparent
-                    via-white/[0.06]
-                    to-transparent
-                    transition-transform
-                    duration-700
-                    group-hover:translate-x-full
+                    rounded-full
+                    bg-[#E8C27A]/0
+                    blur-xl
+                    transition-all
+                    duration-500
+                    group-hover:bg-[#E8C27A]/10
                   "
                 />
 
                 {/* Icon */}
 
-                <span
+                <Icon
+                  size={19}
                   className="
                     relative
-                    flex
-                    h-9
-                    w-9
-                    items-center
-                    justify-center
-                    rounded-full
-                    border
-                    border-white/10
-                    bg-black/30
-                    text-gray-300
-                    transition-all
-                    duration-300
-                    group-hover:border-[#E8C27A]/30
-                    group-hover:text-[#E8C27A]
+                    z-10
+                    transition-transform
+                    duration-500
+                    group-hover:scale-110
                   "
-                >
-                  <Icon size={17} strokeWidth={1.8} />
-                </span>
+                />
 
-                {/* Text */}
-
-                <span className="relative text-left">
-
-                  <span
-                    className="
-                      block
-                      text-sm
-                      font-medium
-                      text-gray-200
-                      transition-colors
-                      duration-300
-                      group-hover:text-white
-                    "
-                  >
-                    {social.name}
-                  </span>
-
-                  <span className="hidden text-[11px] text-gray-500 sm:block">
-                    {social.description}
-                  </span>
-
-                </span>
-
-              </motion.a>
+              </a>
             );
           })}
 
         </div>
 
-        {/* ============================= */}
-        {/* Navigation */}
-        {/* ============================= */}
 
-        <div className="mt-14 flex flex-wrap items-center justify-center gap-8">
+        {/* Small Social Label */}
 
-          {/* Uncomment when needed */}
+        <p className="mt-4 text-[11px] uppercase tracking-[0.25em] text-gray-600">
+          Connect with IndiQuant
+        </p>
 
-          {/*
-          <a
-            href="/how-it-works"
-            className="
-              text-sm
-              text-gray-400
-              transition
-              hover:text-[#E8C27A]
-            "
-          >
-            How It Works
-          </a>
 
-          <a
-            href="/waitlist-journey"
-            className="
-              text-sm
-              text-gray-400
-              transition
-              hover:text-[#E8C27A]
-            "
-          >
-            Waitlist Journey
-          </a>
-
-          <a
-            href="/sneak-peek"
-            className="
-              text-sm
-              text-gray-400
-              transition
-              hover:text-[#E8C27A]
-            "
-          >
-            Sneak Peek
-          </a>
-          */}
-
-        </div>
-
-        {/* ============================= */}
+        {/* -------------------------------- */}
         {/* Divider */}
-        {/* ============================= */}
+        {/* -------------------------------- */}
 
-        <div className="my-14 h-px bg-white/10" />
+        <div className="my-12 h-px bg-white/[0.08] md:my-14" />
 
-        {/* ============================= */}
-        {/* Bottom */}
-        {/* ============================= */}
+
+        {/* -------------------------------- */}
+        {/* Bottom Footer */}
+        {/* -------------------------------- */}
 
         <div
           className="
@@ -295,36 +200,22 @@ function Footer() {
             flex-col
             items-center
             justify-between
-            gap-6
-            text-sm
-            text-gray-500
+            gap-5
             md:flex-row
           "
         >
 
           {/* Copyright */}
 
-          {/*
-          <p>
+          <p className="text-xs text-gray-600 md:text-sm">
             © 2026 IndiQuant. All rights reserved.
           </p>
-          */}
+
 
           {/* Back To Top */}
 
-          <motion.button
-            whileHover={{
-              y: -3,
-            }}
-            whileTap={{
-              scale: 0.97,
-            }}
-            onClick={() =>
-              window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-              })
-            }
+          <button
+            onClick={handleBackToTop}
             className="
               group
               flex
@@ -333,32 +224,45 @@ function Footer() {
               rounded-full
               border
               border-white/10
-              bg-white/5
+              bg-white/[0.04]
               px-5
               py-2.5
+              text-sm
+              text-gray-400
               backdrop-blur-xl
               transition-all
               duration-300
+              hover:-translate-y-0.5
               hover:border-[#E8C27A]/40
               hover:bg-[#E8C27A]/10
               hover:text-[#E8C27A]
             "
           >
-            Back to Top
+            <span>Back to Top</span>
 
             <ChevronUp
-              size={18}
+              size={17}
               className="
-                transition
+                transition-transform
                 duration-300
                 group-hover:-translate-y-1
               "
             />
-          </motion.button>
+          </button>
 
         </div>
 
+
+        {/* -------------------------------- */}
+        {/* Bottom Tiny Brand */}
+        {/* -------------------------------- */}
+
+        <div className="mt-10 flex items-center justify-center gap-2 text-[10px] uppercase tracking-[0.3em] text-gray-700">
+          <span>Built for the next generation of quants</span>
+        </div>
+
       </div>
+
     </footer>
   );
 }
