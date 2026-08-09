@@ -99,27 +99,27 @@ import Container from "../common/Container";
 const steps = [
   {
     icon: <ShieldCheck color="#E8C27A" size={28} />,
-    title: "Verify Your Identity",
+    title: "Submit Your Idea",
     description:
-      "Secure your profile once. Every assessment is permanently linked to your verified identity.",
+      "Every great strategy starts with a hypothesis. Put yours to the test.",
   },
   {
     icon: <BrainCircuit color="#E8C27A" size={28} />,
-    title: "Prove Your Skills",
+    title: "Prove Your Edge",
     description:
-      "Demonstrate your real abilities through practical assessments instead of relying only on resumes.",
+      "Numbers don't lie. Let your strategy compete against the market",
   },
   {
     icon: <Trophy color="#E8C27A" size={28} />,
-    title: "Compete Live",
+    title: "Face The Market",
     description:
-      "Participate in recruitment tournaments designed to highlight problem-solving and teamwork.",
+      "Backtest, challenge, and refine your strategy across real market conditions.",
   },
   {
     icon: <BriefcaseBusiness color="#E8C27A" size={28} />,
-    title: "Get Discovered",
+    title: "Beat The Benchmark",
     description:
-      "Top performers receive interview opportunities and early access to future hiring events.",
+      "Discover how your strategy stacks up against thousands of others.",
   },
 ];
 

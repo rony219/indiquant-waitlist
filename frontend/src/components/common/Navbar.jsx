@@ -86,7 +86,8 @@ function Navbar() {
           {/* Notify Button */}
 
           <Link
-            to="/"
+            to={homeLink}
+            // to="/"
             className="
             hidden
             rounded-full

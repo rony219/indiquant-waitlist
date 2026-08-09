@@ -101,20 +101,125 @@
 // export default App;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// import "./App.css";
+
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// import Home from "./pages/Home";
+// import HowItWorks from "./pages/HowItWorks";
+// import WaitlistJourney from "./pages/WaitlistJourney";
+// import SneakPeek from "./pages/SneakPeek";
+
+// function App() {
+//   return (
+//     <BrowserRouter>
+//       <Routes>
+
+//         <Route
+//           path="/"
+//           element={<Home />}
+//         />
+
+        
+//         <Route
+//           path="/ref/:referralCode"
+//           element={<Home />}
+//         />
+
+//         <Route
+//           path="/how-it-works"
+//           element={<HowItWorks />}
+//         />
+
+//         <Route
+//           path="/waitlist-journey"
+//           element={<WaitlistJourney />}
+//         />
+
+//         <Route
+//           path="/sneak-peek"
+//           element={<SneakPeek />}
+//         />
+
+//       </Routes>
+//     </BrowserRouter>
+//   );
+// }
+
+// export default App;
+
+
+
+
+
+
+
+
 import "./App.css";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 
 import Home from "./pages/Home";
 import HowItWorks from "./pages/HowItWorks";
 import WaitlistJourney from "./pages/WaitlistJourney";
 import SneakPeek from "./pages/SneakPeek";
 
+
+function ReferralTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const match = location.pathname.match(
+      /^\/ref\/([^/]+)$/
+    );
+
+    if (match) {
+      const referralCode = match[1];
+
+      localStorage.setItem(
+        "referralCode",
+        referralCode
+      );
+
+      console.log(
+        "Referral code saved:",
+        referralCode
+      );
+    }
+  }, [location.pathname]);
+
+  return null;
+}
+
+
 function App() {
   return (
     <BrowserRouter>
+
+      {/* Track referral links */}
+      <ReferralTracker />
+
       <Routes>
 
+        {/* Home */}
         <Route
           path="/"
           element={<Home />}
@@ -126,22 +231,26 @@ function App() {
           element={<Home />}
         />
 
+        {/* How It Works */}
         <Route
           path="/how-it-works"
           element={<HowItWorks />}
         />
 
+        {/* Waitlist Journey */}
         <Route
           path="/waitlist-journey"
           element={<WaitlistJourney />}
         />
 
+        {/* Sneak Peek */}
         <Route
           path="/sneak-peek"
           element={<SneakPeek />}
         />
 
       </Routes>
+
     </BrowserRouter>
   );
 }
