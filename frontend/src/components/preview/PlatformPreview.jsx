@@ -18,7 +18,7 @@ function PlatformPreview() {
               fontFamily: "var(--font-heading)",
             }}
           >
-            Built For Modern Hiring
+            The Gig Economy for Quantitative Researchers.
           </h2>
 
         </div>
