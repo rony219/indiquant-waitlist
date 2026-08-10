@@ -38,11 +38,11 @@ function Footer() {
       {/* Background Glows */}
       {/* -------------------------------- */}
 
-      <div className="pointer-events-none absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full bg-[#E8C27A]/5 blur-[130px]" />
+      <div className="pointer-events-none absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full  blur-[130px]" />
 
-      <div className="pointer-events-none absolute bottom-0 left-0 h-72 w-72 rounded-full bg-[#E8C27A]/[0.025] blur-[120px]" />
+      <div className="pointer-events-none absolute bottom-0 left-0 h-72 w-72 rounded-full  blur-[120px]" />
 
-      <div className="pointer-events-none absolute right-0 top-1/3 h-72 w-72 rounded-full bg-white/[0.015] blur-[120px]" />
+      <div className="pointer-events-none absolute right-0 top-1/3 h-72 w-72 rounded-full blur-[120px]" />
 
 
       {/* -------------------------------- */}
