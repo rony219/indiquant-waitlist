@@ -84,6 +84,7 @@ app.add_middleware(
         "http://127.0.0.1:5173",
         "https://indiquant-waitlist.vercel.app",
         "https://join.indiquantresearch.in",
+        "https://www.join.indiquantresearch.in",
     ],
     allow_credentials=True,
     allow_methods=["*"],
