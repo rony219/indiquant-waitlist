@@ -127,9 +127,9 @@ function Home() {
         <Navbar />
 
         {/* <Hero /> */}
+        <Journey />
         <Hero user={user} />
 
-        <Journey />
 
         <SectionDivider />
 
