@@ -128,10 +128,10 @@ function Home() {
 
         {/* <Hero /> */}
         <Journey />
+        <SectionDivider />
         <Hero user={user} />
 
 
-        <SectionDivider />
 
         <FutureSection />
 
