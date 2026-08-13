@@ -91,6 +91,7 @@ import {
   BrainCircuit,
   Trophy,
   BriefcaseBusiness,
+  ChartNoAxesCombined,
 } from "lucide-react";
 
 import JourneyStep from "../common/JourneyStep";
@@ -99,27 +100,33 @@ import Container from "../common/Container";
 const steps = [
   {
     icon: <ShieldCheck color="#E8C27A" size={28} />,
-    title: "Submit Your Idea",
+    title: "The Data Is Your Starting Point",
     description:
-      "Every great strategy starts with a hypothesis. Put yours to the test.",
+      "Access open-source datasets and uncover the patterns, signals, and opportunities hidden within the numbers.",
   },
   {
     icon: <BrainCircuit color="#E8C27A" size={28} />,
-    title: "Prove Your Edge",
+    title: "Turn Data Into An Edge",
     description:
-      "Numbers don't lie. Let your strategy compete against the market",
+      "Use the dataset to build, train, and refine your quantitative model. Your code. Your hypothesis. Your strategy.",
   },
   {
     icon: <Trophy color="#E8C27A" size={28} />,
-    title: "Face The Market",
+    title: "Think You’ve Found The Signal?",
     description:
-      "Backtest, challenge, and refine your strategy across real market conditions.",
+      "Submit your model and we’ll evaluate its performance, robustness, and potential.",
   },
   {
     icon: <BriefcaseBusiness color="#E8C27A" size={28} />,
-    title: "Beat The Benchmark",
+    title: "The market tests. Our metrics decide",
     description:
-      "Discover how your strategy stacks up against thousands of others.",
+      "We score your model across various quantitative factors alongside the current market regime.",
+  },
+  {
+    icon: <ChartNoAxesCombined color="#E8C27A" size={28} />,
+    title: "Turn Research Into Returns.",
+    description:
+      "If your model gets selected for deployment, it can participate in live strategies—and you receive your share of the profits it generates.",
   },
 ];
 
