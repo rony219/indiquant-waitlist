@@ -457,6 +457,8 @@ import ExperienceQuestions from "./ExperienceQuestions";
 function WaitlistForm() {
   const [email, setEmail] =useState("");
 
+  const [registeredEmail, setRegisteredEmail] = useState(""); // change here
+
   const [loading, setLoading] = useState(false);
 
   const [error, setError] = useState("");
@@ -572,6 +574,8 @@ console.log(
 
 setSuccessData(data);
 
+setRegisteredEmail(email); // change here 
+
 setEmail("");
 
 setShowExperience(true);  //  change here
@@ -612,7 +616,7 @@ setShowExperience(true);  //  change here
   if (showExperience) {
   return (
     <ExperienceQuestions
-      email={successData.email}
+      email={registeredEmail}
       onComplete={() => {
         setShowExperience(false);
       }}
