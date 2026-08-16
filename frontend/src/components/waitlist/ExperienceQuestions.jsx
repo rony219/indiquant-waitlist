@@ -64,41 +64,84 @@ function ExperienceQuestions({ email, onComplete }) {
 
     setLoading(true);
 
+    // try {
+    //   const response = await fetch(
+    //     "https://indiquant-waitlist-backend.onrender.com/api/waitlist/experience",
+    //     {
+    //       method: "PUT",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //       body: JSON.stringify({
+    //         email: email,
+    //         experience_tools: experienceTools,
+    //         model_approaches: modelApproaches,
+    //       }),
+    //     }
+    //   );
+
+    //   const data = await response.json();
+
+    //   if (!response.ok) {
+    //     throw new Error(
+    //       data.detail || "Failed to save your answers."
+    //     );
+    //   }
+
+    //   console.log("Experience saved:", data);
+
+    //   onComplete();
+    // } catch (err) {
+    //   console.error(err);
+    //   setError(
+    //     err.message || "Something went wrong."
+    //   );
+    // } finally {
+    //   setLoading(false);
+    // }
+
     try {
-      const response = await fetch(
-        "https://indiquant-waitlist-backend.onrender.com/api/waitlist/experience",
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email: email,
-            experience_tools: experienceTools,
-            model_approaches: modelApproaches,
-          }),
-        }
-      );
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(
-          data.detail || "Failed to save your answers."
-        );
-      }
-
-      console.log("Experience saved:", data);
-
-      onComplete();
-    } catch (err) {
-      console.error(err);
-      setError(
-        err.message || "Something went wrong."
-      );
-    } finally {
-      setLoading(false);
+  const response = await fetch(
+    "https://indiquant-waitlist-backend.onrender.com/api/waitlist/experience",
+    {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: user.email,
+        experience_tools: experienceTools,
+        model_approaches: modelApproaches,
+      }),
     }
+  );
+
+  const data = await response.json();
+
+  console.log("Experience API response:", data);
+
+  if (!response.ok) {
+    throw new Error(
+      typeof data.detail === "string"
+        ? data.detail
+        : "Unable to save your experience."
+    );
+  }
+
+  console.log("Experience saved successfully:", data);
+
+  // Continue to next step
+  setStep(3);
+
+} catch (err) {
+  console.error("Experience submission error:", err);
+
+  setError(
+    err instanceof Error
+      ? err.message
+      : "Something went wrong. Please try again."
+  );
+}
   };
 
   return (
@@ -227,12 +270,19 @@ function ExperienceQuestions({ email, onComplete }) {
 
         </div>
       </div>
-
+{/* 
       {error && (
         <p className="mb-5 text-center text-sm text-red-400">
           {error}
         </p>
-      )}
+      )} */}
+      {error && (
+  <p className="mt-4 text-center text-red-400">
+    {typeof error === "string"
+      ? error
+      : "Something went wrong. Please try again."}
+  </p>
+)}
 
       <button
         type="button"
