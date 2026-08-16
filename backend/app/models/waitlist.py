@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, DateTime
+from sqlalchemy import Column, Integer, String, DateTime, Text
 from sqlalchemy.sql import func
 
 from app.database.database import Base
@@ -24,4 +24,14 @@ class Waitlist(Base):
     created_at = Column(
         DateTime(timezone=True),
         server_default=func.now()
+    )
+
+    experience_tools = Column(
+        Text,
+        nullable=True
+    )
+
+    model_approaches = Column(
+        Text,
+        nullable=True
     )

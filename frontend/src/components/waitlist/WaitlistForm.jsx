@@ -452,6 +452,7 @@
 
 import { useState } from "react";
 import SuccessCard from "./SuccessCard";
+import ExperienceQuestions from "./ExperienceQuestions";
 
 function WaitlistForm() {
   const [email, setEmail] =useState("");
@@ -461,6 +462,8 @@ function WaitlistForm() {
   const [error, setError] = useState("");
 
   const [successData, setSuccessData] = useState(null);
+
+  const [showExperience, setShowExperience] = useState(false);
 
   // Read referral code if user opened a referral link
   // const referralCode = localStorage.getItem("referralCode");
@@ -571,6 +574,8 @@ setSuccessData(data);
 
 setEmail("");
 
+setShowExperience(true);  //  change here
+
     } catch (err) {
 
       setError(
@@ -588,16 +593,44 @@ setEmail("");
 
   // Show Success Card
 
-  if (successData) {
-    return (
-      <SuccessCard
-        queuePosition={successData.queue_position}
-        // referralLink={`http://localhost:5173/ref/${successData.referral_code}`}
-        referralLink={`https://join.indiquantresearch.in/ref/${successData.referral_code}`}
-        // referralLink={`https://indiquant-waitlist.vercel.app/ref/${successData.referral_code}`}
-      />
-    );
-  }
+
+
+
+  // if (successData) {
+  //   return (
+  //     <SuccessCard
+  //       queuePosition={successData.queue_position}
+        
+  //       referralLink={`https://join.indiquantresearch.in/ref/${successData.referral_code}`}
+        
+  //     />
+  //   );
+  // }
+
+
+
+  if (showExperience) {
+  return (
+    <ExperienceQuestions
+      email={successData.email}
+      onComplete={() => {
+        setShowExperience(false);
+      }}
+    />
+  );
+}
+
+if (successData) {
+  return (
+    <SuccessCard
+      queuePosition={successData.queue_position}
+      referralLink={`https://join.indiquantresearch.in/ref/${successData.referral_code}`}
+    />
+  );
+}
+
+
+
 
   return (
     <div className="w-full max-w-xl  px-2 sm:px-0"> {/* Change here */}

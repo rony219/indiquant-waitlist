@@ -30,14 +30,17 @@
 
 
 
-
+import json  #change here
 from fastapi import APIRouter, Depends, HTTPException
 
 from sqlalchemy.orm import Session
 
 from app.database.database import get_db
+from app.models.waitlist import Waitlist  # change here
 from app.schemas.waitlist import WaitlistCreate
 from app.services.waitlist_service import WaitlistService
+from app.schemas.experience import ExperienceUpdate
+
 
 
 router = APIRouter(
@@ -67,6 +70,54 @@ def get_waitlist_stats(
     return WaitlistService.get_waitlist_stats(db)
 
 
+
+
+# =========================================================
+# UPDATE USER EXPERIENCE
+# =========================================================
+
+@router.put("/experience")
+def update_experience(
+    data: ExperienceUpdate,
+    db: Session = Depends(get_db),
+):
+
+    user = (
+        db.query(Waitlist)
+        .filter(Waitlist.email == data.email)
+        .first()
+    )
+
+    if not user:
+        raise HTTPException(
+            status_code=404,
+            detail="User not found.",
+        )
+
+    # Save Question 1 answers
+    user.experience_tools = json.dumps(
+        data.experience_tools
+    )
+
+    # Save Question 2 answers
+    user.model_approaches = json.dumps(
+        data.model_approaches
+    )
+
+    db.commit()
+    db.refresh(user)
+
+    return {
+        "message": "Experience saved successfully.",
+        "email": user.email,
+        "experience_tools": data.experience_tools,
+        "model_approaches": data.model_approaches,
+    }
+
+
+
+
+
 @router.get("/{referral_code}")
 def get_waitlist_dashboard(
     referral_code: str,
@@ -85,3 +136,4 @@ def get_waitlist_dashboard(
         )
 
     return data
+
